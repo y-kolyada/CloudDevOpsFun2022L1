@@ -1,0 +1,33 @@
+CentOS Stream 8 - Install instructions¶
+https://linux.web.cern.ch/centos8/docs/install/
+
+How To Install VirtualBox on Rocky Linux 8 / CentOS 8 / RHEL 8
+https://www.itzgeek.com/how-tos/linux/centos-how-tos/how-to-install-virtualbox-on-centos-8-rhel-8.html
+
+How To Install VirtualBox Extension Pack
+https://phoenixnap.com/kb/install-virtualbox-extension-pack
+
+Install Oracle VM VirtualBox to configure Virtualization Environment.
+https://www.server-world.info/en/note?os=CentOS_Stream_8&p=virtualbox&f=1
+
+Ubuntu 22.04.1 LTS (Jammy Jellyfish)
+https://releases.ubuntu.com/22.04/
+
+!!! Terminal not opening on Ubuntu 22.04 on Virtual box 7.0.0
+https://askubuntu.com/questions/1435918/terminal-not-opening-on-ubuntu-22-04-on-virtual-box-7-0-0
+Same on vbox 7.0, I had fixed it adding en_US.UTF-8 instead of en_US to the /etc/default/locale 
+then sudo locale-gen --purge and reboot.
+
+My solution was to create a new VM with a new installation. This time I selected "Skip unattended 
+installation" when I created the VM, so that the Guest Additions was not automatically installed. 
+Now I could start the terminal! After this I installed the Guest Additions using sudo apt-get install 
+virtualbox-guest-additions-iso. In this way I got an old version of the Guest Additions, but that 
+version seems to work fine.
+So obviously the problem is related to the Guest Additions.
+
+
+Ubuntu 20.04.5 LTS (Focal Fossa)
+https://releases.ubuntu.com/20.04.5/
+
+Download Fedora 36 Workstation
+https://getfedora.org/en/workstation/download/
