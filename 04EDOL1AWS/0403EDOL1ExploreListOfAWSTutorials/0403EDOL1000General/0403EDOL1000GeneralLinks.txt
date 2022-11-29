@@ -28,7 +28,14 @@
 # AWS IAM Identity Center FAQs
 # https://aws.amazon.com/iam/identity-center/faqs/
 
+# Enabling MFA devices for users in AWS
+# https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable.html
 
+# Register an MFA device
+# https://docs.aws.amazon.com/singlesignon/latest/userguide/how-to-register-device.html
+
+# Multi-Factor Authentication (MFA) for IAM
+# https://aws.amazon.com/iam/features/mfa/?audit=2019q1
 
 AWS_Documentation_AWSCommandLineInterface_UGv2_GettingStarted_Prerequisites_1
 
