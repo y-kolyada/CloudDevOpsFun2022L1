@@ -1,0 +1,35 @@
+# AWS SDKs and Tools maintenance policy
+# https://docs.aws.amazon.com/sdkref/latest/guide/maint-policy.html
+
+# AWS SDKs and Tools version support matrix
+# https://docs.aws.amazon.com/sdkref/latest/guide/version-support-matrix.html
+
+# AWS Command Line Interface
+# https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
+
+# Getting started with the AWS CLI
+# https://docs.aws.amazon.com/cli/latest/userguide/getting-started-prereqs.html
+
+# Security best practices in IAM
+# https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#bp-users-federation-idp
+
+# AWS account root user credentials and IAM user credentials
+# https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html#aws_tasks-that-require-root
+
+# Tasks that require root user credentials
+# https://docs.aws.amazon.com/accounts/latest/reference/root-user-tasks.html
+
+# Best practices to protect your account's root user
+# https://docs.aws.amazon.com/accounts/latest/reference/best-practices-root-user.html
+
+
+### AWS IAM Identity Center (Successor to AWS Single Sign-On)
+
+# AWS IAM Identity Center FAQs
+# https://aws.amazon.com/iam/identity-center/faqs/
+
+
+
+AWS_Documentation_AWSCommandLineInterface_UGv2_GettingStarted_Prerequisites_1
+
+AWS_Documentation_AWSIAMIdentityCenter_UG_GettingStarted
