@@ -37,6 +37,18 @@
 # Multi-Factor Authentication (MFA) for IAM
 # https://aws.amazon.com/iam/features/mfa/?audit=2019q1
 
+
+### AWS IAM Identity Center (Successor to AWS Single Sign-On)
+https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html
+
+
 AWS_Documentation_AWSCommandLineInterface_UGv2_GettingStarted_Prerequisites_1
 
 AWS_Documentation_AWSIAMIdentityCenter_UG_GettingStarted
+
+AWS_Documentation_AWSOrganizations_UG_GettingStartedWithAWSOrganizations
+
+
+
+
+
