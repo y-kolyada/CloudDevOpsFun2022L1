@@ -46,8 +46,17 @@ AWS_Documentation_AWSCommandLineInterface_UGv2_GettingStarted_Prerequisites_1
 
 AWS_Documentation_AWSIAMIdentityCenter_UG_GettingStarted
 
-AWS_Documentation_AWSOrganizations_UG_GettingStartedWithAWSOrganizations
+# AWS_Documentation_AWSOrganizations_UG_GettingStartedWithAWSOrganizations
+# Getting started with AWS Organizations
+# https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started.html
 
+# AWS_Documentation_AWSOrganizations_UG_OrganizationsConfiguration
+# Tutorial: Creating and configuring an organization
+# https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tutorials_basic.html
+
+# AWS_Documentation_AWSOrganizations_UG_MonitorCloudWatchEvents
+# Tutorial: Monitor important changes to your organization with CloudWatch Events
+# https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tutorials_cwe.html
 
 
 

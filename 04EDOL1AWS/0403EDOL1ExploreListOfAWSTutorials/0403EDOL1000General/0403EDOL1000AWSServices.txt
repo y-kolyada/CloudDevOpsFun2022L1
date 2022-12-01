@@ -1,0 +1,10 @@
+AWS Organizations
+AIM
+CloudTrail 
+ - Event history (Free)
+ - Lake (Free 30 days)
+ - Trails (Free one copy on S3 bucket)
+
+Lambda
+Simple Notification Service (SNS)
+CloudWatch
