@@ -8,3 +8,141 @@ CloudTrail
 Lambda
 Simple Notification Service (SNS)
 CloudWatch
+
+
+Amazon Web Services Cloud
+https://docs.aws.amazon.com/whitepapers/latest/aws-overview/amazon-web-services-cloud-platform.html
+
+Storage
+https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html
+Amazon Elastic Block Store
+Amazon Elastic File System
+Amazon FSx for Lustre
+Amazon FSx for OpenZFS
+Amazon FSx for NetApp ONTAP
+Amazon FSx for Windows File Server
+Amazon Simple Storage Service
+AWS Backup
+AWS Storage Gateway
+
+
+End User Computing
+https://docs.aws.amazon.com/whitepapers/latest/aws-overview/end-user-computing.html
+Amazon AppStream 2.0
+Amazon WorkSpaces
+Amazon Workspaces Web
+
+
+Developer Tools
+https://docs.aws.amazon.com/whitepapers/latest/aws-overview/developer-tools.html
+Amazon Corretto
+AWS Cloud9
+AWS CloudShell
+AWS CodeArtifact
+AWS CodeBuild
+AWS CodeCommit
+AWS CodeDeploy
+AWS CodePipeline
+AWS CodeStar
+AWS Fault Injection Simulator
+AWS X-Ray
+
+
+Database
+https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html
+Compare AWS database services
+Amazon Aurora
+Amazon DynamoDB
+Amazon ElastiCache
+Amazon Keyspaces (for Apache Cassandra)
+Amazon MemoryDB for Redis
+Amazon Neptune
+Amazon Relational Database Service
+Amazon RDS on VMware
+Amazon Quantum Ledger Database (Amazon QLDB)
+Amazon Timestream
+Amazon DocumentDB (with MongoDB compatibility)
+Amazon Lightsail managed databases
+
+
+Compute Services
+https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html
+Compare AWS compute services
+Amazon EC2
+Amazon EC2 Auto Scaling
+Amazon EC2 Image Builder
+Amazon Lightsail
+AWS App Runner
+AWS Batch
+AWS Elastic Beanstalk
+AWS Fargate
+AWS Lambda
+AWS Serverless Application Repository
+AWS Outposts
+AWS Wavelength
+VMware Cloud on AWS
+
+
+Containers
+https://docs.aws.amazon.com/whitepapers/latest/aws-overview/containers.html
+Amazon Elastic Container Registry
+Amazon Elastic Container Service
+Amazon Elastic Kubernetes Service
+AWS App2Container
+Red Hat OpenShift Service on AWS
+
+
+Application Integration
+https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html
+AWS Step Functions
+Amazon AppFlow
+Amazon EventBridge
+Amazon Managed Workflows for Apache Airflow (MWAA)
+Amazon MQ
+Amazon Simple Notification Service
+Amazon Simple Queue Service
+Amazon Simple Workflow Service
+
+
+Security, Identity, and Compliance
+https://docs.aws.amazon.com/whitepapers/latest/aws-overview/security-services.html
+Amazon Cognito
+Amazon Detective
+Amazon GuardDuty
+Amazon Inspector
+Amazon Macie
+AWS Artifact
+AWS Audit Manager
+AWS Certificate Manager
+AWS CloudHSM
+AWS Directory Service
+AWS Firewall Manager
+AWS Identity and Access Management
+AWS Key Management Service
+AWS Network Firewall
+AWS Resource Access Manager
+AWS Secrets Manager
+AWS Security Hub
+AWS Shield
+AWS IAM Identity Center (successor to AWS Single Sign-On)
+AWS WAF
+
+
+Networking and Content Delivery
+https://docs.aws.amazon.com/whitepapers/latest/aws-overview/networking-services.html
+Amazon API Gateway
+Amazon CloudFront
+Amazon Route 53
+Amazon VPC
+AWS App Mesh
+AWS Cloud Map
+AWS Direct Connect
+AWS Global Accelerator
+AWS PrivateLink
+AWS Private 5G
+AWS Transit Gateway
+AWS VPN
+Elastic Load Balancing
+
+
+https://679630148668.signin.aws.amazon.com/console
