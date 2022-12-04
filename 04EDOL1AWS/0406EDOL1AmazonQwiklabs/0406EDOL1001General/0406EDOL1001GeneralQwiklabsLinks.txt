@@ -37,4 +37,57 @@ https://amazon.qwiklabs.com/focuses/53694?catalog_rank=%7B%22rank%22%3A43%2C%22n
 Introduction to Amazon EC2
 https://amazon.qwiklabs.com/focuses/54372?catalog_rank=%7B%22rank%22%3A50%2C%22num_filters%22%3A0%2C%22has_search%22%3Afalse%7D&parent=catalog
 
+Introduction to Amazon Simple Storage Service (S3)
+https://amazon.qwiklabs.com/focuses/35937?catalog_rank=%7B%22rank%22%3A58%2C%22num_filters%22%3A0%2C%22has_search%22%3Afalse%7D&parent=catalog
+
+reportbucket19202272
+arn:aws:iam::410077410113:role/EC2InstanceProfileRole
+arn:aws:s3:::reportbucket19202272
+
+{
+  "Id": "Policy1670189723914",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1670189718663",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::reportbucket19202272/*",
+      "Principal": {
+        "AWS": [
+          "arn:aws:iam::410077410113:role/EC2InstanceProfileRole"
+        ]
+      }
+    }
+  ]
+}
+
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1670189723914",
+    "Statement": [
+        {
+            "Sid": "Stmt1670189718663",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::410077410113:role/EC2InstanceProfileRole"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::reportbucket19202272/*"
+        },
+        {
+            "Sid": "Stmt1604428842806",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::reportbucket19202272/*"
+        }
+    ]
+}
 
