@@ -1,0 +1,49 @@
+$ hostnamectl
+# Static hostname: terraform2
+#       Icon name: computer-vm
+#         Chassis: vm 🖴
+#      Machine ID: 8ec5c98f39304ecc9700e64935bb6cdc
+#         Boot ID: 3d54fbe2b37148839701283537237c5e
+#  Virtualization: oracle
+# Operating System: CentOS Stream 9
+#     CPE OS Name: cpe:/o:centos:centos:9
+#          Kernel: Linux 5.14.0-205.el9.x86_64
+#    Architecture: x86-64
+# Hardware Vendor: innotek GmbH
+#  Hardware Model: VirtualBox
+
+$ docker --version
+# Docker version 20.10.21, build baeda1f
+
+# Install Docker Engine on CentOS
+# https://docs.docker.com/engine/install/centos/
+# https://wiki.centos.org/AdditionalResources/Repositories
+dnf repolist
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+sudo dnf update
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo yum list docker-ce --showduplicates | sort -r
+# Extra Packages for Enterprise Linux 9 - Next -  2.5 MB/s | 1.4 MB     00:00
+# docker-ce.x86_64               3:20.10.21-3.el9                docker-ce-stable
+
+sudo systemctl start docker
+sudo docker run hello-world
+sudo chmod 660 /var/run/docker.sock
+sudo systemctl start firewalld
+sudo usermod -aG docker ik
+docker ps
+sudo dnf install iptables
+
+$ docker run hello-world
+# Hello from Docker!
+# This message shows that your installation appears to be working correctly.

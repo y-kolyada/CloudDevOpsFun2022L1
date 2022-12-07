@@ -1,0 +1,44 @@
+$ hostnamectl
+# Static hostname: terraform1
+#       Icon name: computer-vm
+#         Chassis: vm
+#      Machine ID: 1d4beb046d5e42238c9c508e7568dd9d
+#         Boot ID: 90b162ba84184730adc68388e71abe9a
+#  Virtualization: oracle
+# Operating System: Ubuntu 22.04.1 LTS
+#          Kernel: Linux 5.15.0-56-generic
+#    Architecture: x86-64
+# Hardware Vendor: innotek GmbH
+#  Hardware Model: VirtualBox
+
+$ docker --version
+Docker version 20.10.21, build baeda1f
+
+
+# Install Docker Engine on Ubuntu
+# https://docs.docker.com/engine/install/ubuntu/
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+
+sudo mkdir -p /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+# sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo groupadd docker
+sudo usermod -aG docker ik
+sudo docker run hello-world
+sudo chmod 660 /var/run/docker.sock
+docker ps
+sudo apt install iptables
+
+$ docker run hello-world
+# Hello from Docker!
+# This message shows that your installation appears to be working correctly.
