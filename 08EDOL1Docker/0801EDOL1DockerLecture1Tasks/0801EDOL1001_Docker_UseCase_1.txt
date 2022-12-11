@@ -1,0 +1,72 @@
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+
+docker search ubuntu
+docker images
+
+sudo du -md 1 /var/lib/docker/
+# 1       /var/lib/docker/swarm
+# 1       /var/lib/docker/buildkit
+# 1       /var/lib/docker/trust
+# 1       /var/lib/docker/tmp
+# 1       /var/lib/docker/image
+# 1       /var/lib/docker/plugins
+# 1       /var/lib/docker/containers
+# 1       /var/lib/docker/runtimes
+# 1       /var/lib/docker/volumes
+# 1       /var/lib/docker/network
+# 117     /var/lib/docker/overlay2
+# 117     /var/lib/docker/
+
+docker build -t student:v1 .
+# Removing intermediate container fe5f338fc1ff
+#  ---> 13fb467acbc6
+# Successfully built 13fb467acbc6
+# Successfully tagged student:v1
+
+sudo du -md 1 /var/lib/docker/
+# 1       /var/lib/docker/network
+# 237     /var/lib/docker/overlay2
+# 239     /var/lib/docker/
+
+docker pull ubuntu:22.04
+docker images
+sudo du -md 1 /var/lib/docker/
+# 1       /var/lib/docker/network
+# 556     /var/lib/docker/overlay2
+# 558     /var/lib/docker/
+
+docker pull ubuntu
+docker images
+# REPOSITORY    TAG       IMAGE ID       CREATED          SIZE
+# student       v1        13fb467acbc6   16 minutes ago   226MB
+# ubuntu        22.04     a8780b506fa4   5 weeks ago      77.8MB
+# ubuntu        latest    a8780b506fa4   5 weeks ago      77.8MB
+# ubuntu        20.04     680e5dfb52c7   6 weeks ago      72.8MB
+# hello-world   latest    feb5d9fea6a5   14 months ago    13.3kB
+
+sudo du -md 1 /var/lib/docker/
+# 1       /var/lib/docker/network
+# 556     /var/lib/docker/overlay2
+# 558     /var/lib/docker/
+
+docker run -it ubuntu
+docker ps -a
+docker ps -l
+
+docker ps -l
+# CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
+# 5fe0902f5c05   ubuntu    "bash"    4 minutes ago   Up 4 minutes             pedantic_khayyam
+docker stop 5fe0902f5c05
+# 5fe0902f5c05
+docker ps -l
+# CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS                        PORTS     NAMES
+# 5fe0902f5c05   ubuntu    "bash"    5 minutes ago   Exited (137) 14 seconds ago             pedantic_khayyam
+docker start 5fe0902f5c05
+# 5fe0902f5c05
+docker ps -l
+# CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
+# 5fe0902f5c05   ubuntu    "bash"    6 minutes ago   Up 8 seconds             pedantic_khayyam
+
+docker stop pedantic_khayyam
+docker rm pedantic_khayyam
+
