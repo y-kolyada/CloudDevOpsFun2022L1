@@ -1,0 +1,22 @@
+aws ec2 describe-instances \
+--filters  "Name=instance-state-name,Values=running" \
+--query "Reservations[*].Instances[*].{PublicIP:PublicIpAddress,Name:Tags[?Key=='Name']|[0].Value,Status:State.Name,InstanceID:InstanceId}" \
+--output text
+
+VOL=$(aws ec2 describe-instances \
+--filters  Name=instance-state-name,Values=running Name=tag:Name,Values=web-server-* \
+--query "Reservations[*].Instances[*].BlockDeviceMappings[*].Ebs.VolumeId" \
+--output text)
+
+echo $VOL
+
+INST_NAME=$(aws ec2 describe-instances \
+--filters  Name=instance-state-name,Values=running Name=tag:Name,Values=web-server-02 \
+--query "Reservations[*].Instances[*].{Name:Tags[?Key=='Name']|[0].Value"} \
+--output text)
+
+echo $INST_NAME
+
+aws ec2 create-snapshot --volume-id $VOL --description "${INST_NAME} root volume snapshot"
+
+aws ec2 describe-snapshots
