@@ -1,0 +1,26 @@
+aws ec2 describe-instances \
+--filters  "Name=instance-state-name,Values=running" \
+--query "Reservations[*].Instances[*].{PublicIP:PublicIpAddress,Name:Tags[?Key=='Name']|[0].Value,Status:State.Name,InstanceID:InstanceId}" \
+--output text
+
+SNAPSH=$(aws ec2 describe-snapshots \
+--filters  Name=status,Values=completed Name=tag:Name,Values=web-server-02-snapshot \
+--query "Snapshots[*].{ID:SnapshotId}" \
+--output text)
+#--query "Snapshots[*].{ID:SnapshotId,Time:StartTime}" \
+
+echo $SNAPSH
+
+# aws ec2 describe-snapshots
+
+aws ec2 register-image \
+--name web-server-01 \
+--description "web-server-1 from EBS snapshot" \
+--root-device-name "/dev/sda1" \
+--block-device-mappings DeviceName="/dev/sda",Ebs={SnapshotId="${SNAPSH}"} 
+# --block-device-mappings DeviceName="/dev/sda",Ebs={SnapshotId="${SNAPSH}" DeviceName=/dev/xvdf,Ebs={VolumeSize=100}}
+
+aws ec2 describe-images \
+--filters "Name=tag:Name,Values=web-server-01" \
+--query 'Images[*].[ImageId]' \
+--output text
