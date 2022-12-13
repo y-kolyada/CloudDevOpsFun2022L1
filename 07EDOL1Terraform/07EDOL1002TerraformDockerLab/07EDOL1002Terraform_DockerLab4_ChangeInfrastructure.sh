@@ -40,3 +40,5 @@ sed -i 's/external = 8000/external = 8080/g' main.tf
 terraform apply
 
 terraform show
+
+terraform state list 
