@@ -4,7 +4,7 @@ mkdir learn-terraform-docker-container
 
 cd learn-terraform-docker-container
 
-cat << EOF > tee -a main.tf
+cat << EOF | tee -a main.tf
 terraform {
   required_providers {
     docker = {
