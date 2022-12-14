@@ -2,7 +2,7 @@
 
 # Prerequisites
 #
-# https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-change
+# https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build
 
 
 # export AWS_ACCESS_KEY_ID= ...
