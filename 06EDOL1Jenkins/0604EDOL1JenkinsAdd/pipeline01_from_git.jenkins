@@ -1,5 +1,5 @@
 #!groovy
-properties([disableConcurentBuilds()])
+properties([disableConcurrentBuilds()])
 
 pipeline {
     agent {
@@ -10,7 +10,7 @@ pipeline {
         timestamps()
     }
     stages {
-        stage("First stape") {
+        stage("First step") {
             steps {
                 sh 'ssh ik@terraform2 \'hostname\''
             }
