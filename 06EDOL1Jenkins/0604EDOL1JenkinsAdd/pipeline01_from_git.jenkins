@@ -1,0 +1,19 @@
+#!groovy
+properties([disableConcurentBuilds()])
+
+pipeline {
+    agent {
+        label 'agent1'
+    }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+    stages {
+        stage("First stape") {
+            steps {
+                sh 'ssh ik@terraform2 \'hostname\''
+            }
+        }
+    }
+}
