@@ -1,0 +1,27 @@
+# https://hub.docker.com/repositories/ykolyada
+
+# Docker – EXPOSE Instruction
+# https://www.geeksforgeeks.org/docker-expose-instruction/
+
+# How to find which package contains a specific file on Ubuntu?
+# https://itslinuxfoss.com/find-package-contains-specific-file-ubuntu/
+# sudo apt-file search -i <file name>
+
+# How To Remove Docker Images, Containers, and Volumes
+# https://docs.docker.com/engine/reference/commandline/rm/
+# https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+
+# Python venv: How To Create, Activate, Deactivate, And Delete
+# https://python.land/virtual-environments/virtualenv
+
+# Quickstart
+# https://en.wikipedia.org/wiki/Flask_(web_framework)
+# https://flask.palletsprojects.com/en/2.2.x/quickstart/
+# https://pythonbasics.org/flask-tutorial-templates/
+# https://codebeautify.org/htmlviewer
+
+# How To Use Templates in a Flask Application
+# https://www.digitalocean.com/community/tutorials/how-to-use-templates-in-a-flask-application
+
+# Display an Image in Flask App
+# https://www.delftstack.com/howto/python-flask/flask-display-image/
