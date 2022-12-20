@@ -1,0 +1,5 @@
+df -h
+sudo lvextend -l +50%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+sudo lvdisplay
+sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+df -h
