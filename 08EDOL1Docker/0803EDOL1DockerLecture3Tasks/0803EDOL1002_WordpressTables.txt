@@ -1,0 +1,25 @@
+mysql> 
+SELECT 
+  TABLE_NAME, 
+  sum(TABLE_ROWS) 
+FROM information_schema.TABLES 
+  WHERE 
+    table_schema = 'wordpress' 
+  GROUP BY TABLE_NAME;
++-----------------------+-----------------+
+| TABLE_NAME            | sum(table_rows) |
++-----------------------+-----------------+
+| wp_commentmeta        |               0 |
+| wp_comments           |               1 |
+| wp_links              |               0 |
+| wp_options            |             149 |
+| wp_postmeta           |               4 |
+| wp_posts              |               5 |
+| wp_term_relationships |               2 |
+| wp_term_taxonomy      |               2 |
+| wp_termmeta           |               0 |
+| wp_terms              |               2 |
+| wp_usermeta           |              19 |
+| wp_users              |               1 |
++-----------------------+-----------------+
+12 rows in set (0.00 sec)
