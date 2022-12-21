@@ -1,0 +1,12 @@
+# How to Integrate Jenkins with GitHub
+# https://www.cprime.com/resources/blog/how-to-integrate-jenkins-github/
+
+# How to Integrate Your GitHub Repository to Your Jenkins Project
+# https://www.blazemeter.com/blog/how-to-integrate-your-github-repository-to-your-jenkins-project
+
+# Jenkins initial Settings
+# https://www.jenkins.io/doc/book/installing/initial-settings/
+
+# Jenkins can not connect by ip address
+# https://stackoverflow.com/questions/44365750/jenkins-can-not-connect-by-ip-address
+# https://serverfault.com/questions/871597/unable-to-access-jenkins-centos-7
