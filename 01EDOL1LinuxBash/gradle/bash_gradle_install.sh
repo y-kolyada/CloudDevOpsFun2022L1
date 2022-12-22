@@ -15,7 +15,7 @@
 sudo -l
 java -version && unzip -v && wget -V
 
-echo "Install err"
+$retVal=$?
 if [ $retVal -ne 0 ]; then
   echo "Install java, unzip, wget and set sudo rights"
   exit $retVal
@@ -31,12 +31,11 @@ touch cat ~/.bashrc
 cat <<EOF>> ~/.bashrc
 export PATH=\$PATH:/opt/gradle-7.6/bin
 EOF
-source ~/.bashrc
+. ~/.bashrc
 
 # Optional
 cat <<EOF | sudo tee -a /etc/profile.d/gradle.sh
 export PATH=\$PATH:/opt/gradle-7.6/bin
 EOF
-sudo source /etc/profile
 
 gradle -v
