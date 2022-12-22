@@ -10,9 +10,8 @@
 # https://techviewleo.com/install-adoptium-temurin-openjdk-on-ubuntu/
 
 # Prerequisites
-# 1. Java JDK version 8 or higher
-# 2. sudo:  ALL=(ALL) ALL
-# 3. wget, apt-transport-http
+# 1. sudo:  ALL=(ALL) ALL
+# 2. wget, apt-transport-http
 
 sudo apt install -y wget apt-transport-https
 
