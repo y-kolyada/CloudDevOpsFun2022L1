@@ -1,0 +1,7 @@
+# https://www.eclipse.org/jetty/
+
+# Java servers like Jetty, GlassFish and Tomcat
+# https://www.nginx.com/resources/wiki/start/topics/examples/javaservers/
+
+# https://docs.huihoo.com/jetty/the-definitive-reference/configuring-connectors.html
+# https://xy2401.com/local-docs/java/jetty.9.4.24.v20191120/configuring-connectors.html
