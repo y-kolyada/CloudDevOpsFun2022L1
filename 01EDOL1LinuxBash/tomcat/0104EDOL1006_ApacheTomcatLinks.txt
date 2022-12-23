@@ -1,0 +1,12 @@
+# https://www.eclipse.org/jetty/
+
+# Tomcat 9 Software Downloads (9.0.70, 64-bit Windows zip)
+# https://tomcat.apache.org/download-90.cgi
+# https://phoenixnap.com/kb/install-tomcat-windows
+
+# Tomcat 9 Setup
+# https://tomcat.apache.org/tomcat-9.0-doc/setup.html#Windows
+# https://tomcat.apache.org/tomcat-9.0-doc/RUNNING.txt
+
+# Java servers like Jetty, GlassFish and Tomcat
+# https://www.nginx.com/resources/wiki/start/topics/examples/javaservers/
