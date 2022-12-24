@@ -10,3 +10,7 @@
 
 # Java servers like Jetty, GlassFish and Tomcat
 # https://www.nginx.com/resources/wiki/start/topics/examples/javaservers/
+
+
+https://www.youtube.com/watch?v=FE7ygm8CTaY
+https://www.youtube.com/results?search_query=%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0+Tomcat+9

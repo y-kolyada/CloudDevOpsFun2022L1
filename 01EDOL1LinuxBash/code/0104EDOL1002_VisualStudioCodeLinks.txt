@@ -1,0 +1,2 @@
+# Java Web Apps with Visual Studio Code
+# https://code.visualstudio.com/docs/java/java-webapp
