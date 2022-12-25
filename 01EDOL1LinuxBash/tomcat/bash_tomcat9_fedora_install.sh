@@ -24,36 +24,46 @@ if [ $retVal -ne 0 ]; then
   exit $retVal
 fi
 
+sudo setenforce 0
+# sudo sed -i 's/^SELINUX=.*/SELINUX=permissive/g' /etc/selinux/config
+sudo sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
+sudo reboot
+
 cd ~/install
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/${TOMCAT_VER}.tar.gz
 tar xzvf ${TOMCAT_VER}.tar.gz
 sudo mv ${TOMCAT_VER} /opt
+# sudo touch ${TOMCAT_VER}/logs/catalina.out
 ls /opt/${TOMCAT_VER}
 
-sudo useradd tomcat
 sudo groupadd tomcat
-sudo usermod -aG tomcat tomcat
-sudo chown -R tomcat:tomcat /opt/${TOMCAT_VER}
-sudo chmod -R u+x /opt/${TOMCAT_VER}/bin
+sudo useradd -M -d /opt/${TOMCAT_VER} -g tomcat tomcat
+# sudo usermod -aG tomcat tomcat
 
+sudo chown -R tomcat:tomcat /opt/${TOMCAT_VER}
+# sudo chmod -R u+x /opt/${TOMCAT_VER}/bin
+
+# sudo systemctl disable tomcat9
+# Removed "/etc/systemd/system/multi-user.target.wants/tomcat9.service".
 sudo rm /etc/systemd/system/tomcat9.service
-cat <<EOF | sudo tee -a /etc/systemd/system/tomcat9.service
+
+sudo tee -a /etc/systemd/system/tomcat9.service<<EOF
 [Unit]
 Description=Apache Tomcat 9
 Documentation=http://tomcat.apache.org/tomcat-9.0-doc/
-After=network.target
+After=network.target syslog.target
 
 [Service]
-Type=forking
+#Type=simple
+Type=oneshot
 User=tomcat
 Group=tomcat
 
 ExecStart=/opt/${TOMCAT_VER}/bin/startup.sh
 ExecStop=/opt/${TOMCAT_VER}/bin/shutdown.sh
-RestartSec=10
-Restart=always
+RemainAfterExit=yes
 
-Environment="JAVA_HOME=/usr/lib/jvm/temurin-11-jdk-amd64"
+Environment="JAVA_HOME=/opt/jdk-11"
 #Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom"
 Environment="CATALINA_BASE=/opt/${TOMCAT_VER}"
 Environment="CATALINA_HOME=/opt/${TOMCAT_VER}"
@@ -68,9 +78,9 @@ sudo systemctl daemon-reload
 
 sudo usermod -aG tomcat ik
 
-sudo systemctl start tomcat9
+sudo systemctl restart tomcat9.service
 sudo systemctl enable tomcat9
-sudo systemctl status tomcat9
+sudo systemctl status tomcat9.service
 
 ##Tomcat 9##
 # sudo mkdir -p /etc/tomcat9/tomcat-users.xml
@@ -104,10 +114,9 @@ sudo systemctl status tomcat9
 ##Tomcat 10##
 #sudo nano /opt/tomcat/webapps/manager/META-INF/context.xml
 
-sudo ufw allow from any to any port 8080 proto tcp
+sudo firewall-cmd --add-port=8080/tcp --permanent
 
 touch cat ~/.bashrc
-cat <<EOF | sudo tee -a /etc/profile.d/tomcat.sh
 export CATALINA_HOME=${TOMCAT_VER}
 export PATH=\$PATH:/opt/${TOMCAT_VER}/bin
 EOF
@@ -123,3 +132,5 @@ EOF
 #  <role rolename="manager-gui,admin-gui" />
 #  <user username="admin" password="admin" roles="manager-gui,admin-gui" />
 #</tomcat-users>
+
+

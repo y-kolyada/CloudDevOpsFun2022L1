@@ -1,5 +1,3 @@
-# https://www.eclipse.org/jetty/
-
 # Tomcat 9 Software Downloads (9.0.70, 64-bit Windows zip)
 # https://tomcat.apache.org/download-90.cgi
 # https://phoenixnap.com/kb/install-tomcat-windows
@@ -11,6 +9,15 @@
 # Java servers like Jetty, GlassFish and Tomcat
 # https://www.nginx.com/resources/wiki/start/topics/examples/javaservers/
 
+# Install Apache Tomcat 9 on CentOS 7 / Fedora 36/35/34/33
+# https://computingforgeeks.com/how-to-install-apache-tomcat-on-centos-fedora/
+# https://itnixpro.com/install-apache-tomcat-on-fedora/
 
-https://www.youtube.com/watch?v=FE7ygm8CTaY
-https://www.youtube.com/results?search_query=%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0+Tomcat+9
+# Understanding and administering systemd
+# https://docs.fedoraproject.org/en-US/quick-docs/understanding-and-administering-systemd/
+# Fedora systemd Services
+# https://docs.fedoraproject.org/en-US/packaging-guidelines/Systemd/
+# https://www.freedesktop.org/software/systemd/man/systemd.service.html
+
+# https://www.youtube.com/watch?v=FE7ygm8CTaY
+# https://www.youtube.com/results?search_query=%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0+Tomcat+9
