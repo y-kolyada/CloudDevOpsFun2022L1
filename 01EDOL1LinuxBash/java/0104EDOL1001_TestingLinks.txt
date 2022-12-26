@@ -1,0 +1,57 @@
+# Top 10 Java Unit Testing Frameworks for 2021
+# https://www.lambdatest.com/blog/top-10-java-testing-frameworks/
+# https://brightsec.com/blog/unit-testing-frameworks/
+# https://www.testscenario.com/best-java-testing-framework/
+# https://www.browserstack.com/guide/top-java-testing-frameworks
+# https://www.softwaretestinghelp.com/unit-testing-tools/
+
+# Upgrade Visual Studio Code to use JUnit 5
+# https://www.youtube.com/watch?v=i5CRDv4M0ZU
+
+# Create Unit tests with JUnit and Maven in VSC
+# https://www.youtube.com/watch?v=5pNUhouyN1Q
+# https://www.youtube.com/watch?v=Af6Ka0Bmflo
+# https://www.youtube.com/watch?v=vZm0lHciFsQ
+
+# JUnit 5. 1. Введение
+# https://www.youtube.com/watch?v=W1INR0I3FCo
+
+# JUnit 5. 2. Установка программного обеспечения
+# https://www.youtube.com/watch?v=TFUKb1XH9Wk
+
+
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+	
+	<dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-launcher</artifactId>
+      <version>${junit.platform.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>

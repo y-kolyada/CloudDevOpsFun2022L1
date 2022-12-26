@@ -1,2 +1,8 @@
 # Java Web Apps with Visual Studio Code
 # https://code.visualstudio.com/docs/java/java-webapp
+
+Extensions:
+* Dependency Analytics (maven pom)
+
+CTRL+AHIFT+P:
+* Configure Java Runtime (1.7 - 11)

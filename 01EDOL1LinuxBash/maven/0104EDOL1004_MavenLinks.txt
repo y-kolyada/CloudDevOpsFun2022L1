@@ -1,0 +1,3 @@
+# How to set servlet for java 11
+# https://stackoverflow.com/questions/70639131/how-to-set-servlet-for-java-11
+# https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
