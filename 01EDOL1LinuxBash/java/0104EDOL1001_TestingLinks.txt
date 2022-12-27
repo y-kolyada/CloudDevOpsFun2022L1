@@ -13,6 +13,16 @@
 # https://www.youtube.com/watch?v=Af6Ka0Bmflo
 # https://www.youtube.com/watch?v=vZm0lHciFsQ
 
+# Mockito and JUnit 5 – Using
+# +++ https://www.baeldung.com/mockito-junit-5-extension
+# https://www.baeldung.com/junit-5-extensions
+# +++ https://mincong.io/2020/04/19/mockito-junit5/
+# https://examples.javacodegeeks.com/core-java/junit/junit-httpservletrequest-example/
+# https://stackoverflow.com/questions/5434419/how-to-test-my-servlet-using-junit
+# https://www.toptal.com/java/unit-integration-junit-tests
+# https://developer.okta.com/blog/2019/03/28/test-java-spring-boot-junit5
+
+
 # JUnit 5. 1. Введение
 # https://www.youtube.com/watch?v=W1INR0I3FCo
 

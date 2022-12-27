@@ -1,0 +1,14 @@
+# https://github.com/javaee/javaee-spec/tree/master/download
+# https://javaee.github.io/servlet-spec/downloads/servlet-4.0/servlet-4_0_FINAL.pdf
+
+# Создание и отладка сервлета. Servlet Intro
+# https://www.youtube.com/watch?v=Jnd4PQt44j0
+# https://www.youtube.com/watch?v=QffeZLzatwU&list=PLU2ftbIeotGps5EkYA4krU5clrWSZZvIo
+
+# Разница между Servlet, Spring MVC и Spring Boot.
+# https://www.youtube.com/watch?v=QzHAynR-v1E
+
+# Java EE on Intelij
+# +++ https://www.youtube.com/watch?v=V6W-AfjWVaQ&list=PLAma_mKffTOTTFqIkLXgHqVuL6xJhb0mr
+
+

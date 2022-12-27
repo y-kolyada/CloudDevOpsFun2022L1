@@ -1,3 +1,15 @@
 # How to set servlet for java 11
 # https://stackoverflow.com/questions/70639131/how-to-set-servlet-for-java-11
 # https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+
+# Project Plugins
+# https://maven.apache.org/plugins/index.html
+# https://maven.apache.org/plugins/maven-resources-plugin/dependency-info.html
+# https://maven.apache.org/plugins/maven-compiler-plugin/usage.html
+# https://maven.apache.org/surefire/maven-surefire-plugin/usage.html
+# https://maven.apache.org/plugins/maven-war-plugin/dependency-info.html
+# https://maven.apache.org/plugins/maven-install-plugin/dependency-info.html
+# https://maven.apache.org/plugins/maven-deploy-plugin/dependency-info.html
+
+
+# https://maven.apache.org/ref/3.8.6/plugins.html
