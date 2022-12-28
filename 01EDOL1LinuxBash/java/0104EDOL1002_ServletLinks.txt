@@ -1,3 +1,6 @@
+# Understanding Web Applications, Servlets, and JSPs
+# https://docs.oracle.com/cd/E17904_01/web.1111/e13712/basics.htm#WBAPP117
+
 # https://github.com/javaee/javaee-spec/tree/master/download
 # https://javaee.github.io/servlet-spec/downloads/servlet-4.0/servlet-4_0_FINAL.pdf
 
@@ -14,4 +17,7 @@
 # Servlet – Debugging
 # https://www.geeksforgeeks.org/servlet-debugging/
 
+# Java Guides
+# https://www.youtube.com/@JavaGuides
+# https://www.javaguides.net/2019/06/jsp-servlet-projects-with-source-code-free-download.html
 

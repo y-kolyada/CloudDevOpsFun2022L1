@@ -1,0 +1,3 @@
+# PVS‑Studio is a static analyzer on guard of code quality
+# https://pvs-studio.com/en/pvs-studio/
+

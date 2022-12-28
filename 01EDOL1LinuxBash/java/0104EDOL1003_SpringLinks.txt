@@ -1,4 +1,6 @@
 # Java Web Apps with Visual Studio Code
 # https://code.visualstudio.com/docs/java/java-webapp
 
+# Testing the Web Layer
+# https://spring.io/guides/gs/testing-web/
 
