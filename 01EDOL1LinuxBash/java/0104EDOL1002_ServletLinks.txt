@@ -11,4 +11,7 @@
 # Java EE on Intelij
 # +++ https://www.youtube.com/watch?v=V6W-AfjWVaQ&list=PLAma_mKffTOTTFqIkLXgHqVuL6xJhb0mr
 
+# Servlet – Debugging
+# https://www.geeksforgeeks.org/servlet-debugging/
+
 

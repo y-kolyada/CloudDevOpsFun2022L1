@@ -1,0 +1,7 @@
+# Open Liberty is an open application framework designed for the cloud
+# https://openliberty.io/
+# https://openliberty.io/guides/
+# https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext
+
+
+
