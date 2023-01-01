@@ -1,0 +1,5 @@
+# How to properly remove old kernels RHEL/CentOS 8
+# https://www.golinuxcloud.com/remove-old-kernels-rhel-centos-8/
+# https://www.centlinux.com/2021/08/remove-old-linux-kernels-in-centos-rhel-8.html
+# https://linuxhint.com/delete-old-unused-kernels-centos-8/
+
