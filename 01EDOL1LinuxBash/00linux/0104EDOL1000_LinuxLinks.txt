@@ -3,3 +3,5 @@
 # https://www.centlinux.com/2021/08/remove-old-linux-kernels-in-centos-rhel-8.html
 # https://linuxhint.com/delete-old-unused-kernels-centos-8/
 
+# dnf command to install a group package
+# dnf groupinstall 'Security Tools'

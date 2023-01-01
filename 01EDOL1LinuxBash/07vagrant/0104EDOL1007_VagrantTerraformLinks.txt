@@ -1,0 +1,4 @@
+# Vagrant vs Terraform
+# https://developer.hashicorp.com/vagrant/intro/vs/terraform
+# https://www.techtarget.com/searchnetworking/tip/Ansible-vs-Terraform-vs-Vagrant-Whats-the-difference
+# https://www.trustradius.com/compare-products/hashicorp-terraform-vs-hashicorp-vagrant
