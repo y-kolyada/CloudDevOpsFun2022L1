@@ -48,6 +48,7 @@ wget https://pkg.adfinis.com/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-
 #wget https://pkg.adfinis.com/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-latest-boot.iso
 #wget https://linuxsoft.cern.ch/cern/centos/s8/BaseOS/x86_64/os/images/boot.iso
 #wget https://pkg.adfinis.com/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20221005-dvd1.iso
+#wget https://download.virtualbox.org/virtualbox/7.0.4/VBoxGuestAdditions_7.0.4.iso -P /tmp
 
 
 # 08

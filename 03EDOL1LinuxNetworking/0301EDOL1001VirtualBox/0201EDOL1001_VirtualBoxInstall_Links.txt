@@ -4,6 +4,16 @@ https://linux.web.cern.ch/centos8/docs/install/
 How To Install VirtualBox on Rocky Linux 8 / CentOS 8 / RHEL 8
 https://www.itzgeek.com/how-tos/linux/centos-how-tos/how-to-install-virtualbox-on-centos-8-rhel-8.html
 
+VirtualBox - how to increase video memory?
+https://askubuntu.com/questions/587083/virtualbox-how-to-increase-video-memory
+VBoxManage modifyvm "Name of VM" --vram 256
+
+How to Install VirtualBox Guest Additions on CentOS 8
+https://download.virtualbox.org/virtualbox/7.0.4/
+https://linuxhint.com/install-virtualbox-guest-additions-centos/
+https://www.tecmint.com/install-virtualbox-guest-additions-on-centos-8/
+https://www.server-world.info/en/note?os=CentOS_Stream_8&p=virtualbox&f=3
+
 How To Install VirtualBox Extension Pack
 https://phoenixnap.com/kb/install-virtualbox-extension-pack
 
