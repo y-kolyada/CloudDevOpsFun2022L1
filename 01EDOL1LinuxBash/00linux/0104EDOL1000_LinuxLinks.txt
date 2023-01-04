@@ -5,3 +5,17 @@
 
 # dnf command to install a group package
 # dnf groupinstall 'Security Tools'
+
+# alternatives --config java bash script
+# https://stackoverflow.com/questions/5954075/alternatives-config-java-bash-script
+# https://www.baeldung.com/linux/update-alternatives-command
+
+
+# Bash Scripting Tutorial
+# https://linuxconfig.org/bash-scripting-tutorial
+
+# How to Compare Strings in Bash
+# https://linuxize.com/post/how-to-compare-strings-in-bash/
+
+# Execute a shell script in current shell with sudo permission
+# https://stackoverflow.com/questions/18809614/execute-a-shell-script-in-current-shell-with-sudo-permission

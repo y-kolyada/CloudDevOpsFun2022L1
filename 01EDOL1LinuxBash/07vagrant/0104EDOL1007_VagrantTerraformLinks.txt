@@ -7,3 +7,24 @@
 # https://realguess.net/2015/10/06/overriding-the-default-forwarded-ssh-port-in-vagrant/
 # https://stackoverflow.com/questions/55332816/how-to-set-vagrants-host-ssh-port
 # https://averagelinuxuser.com/ssh-into-virtualbox/
+
+# Vagrant Advanced Examples
+# +++ https://ctrlnotes.com/vagrant-advanced-examples
+# https://community.ibm.com/community/user/cloud/blogs/stephan-bester/2022/07/05/use-vagrant-to-create-a-centos-environment-for-ans
+# https://www.middlewareinventory.com/blog/vagrant-ansible-example/#Ansible_playbook_and_its_artifacts
+# https://www.packetswitch.co.uk/using-ansible-with-vagrant/
+
+# Pass environment variables to vagrant shell provisioner
+# https://hx-rd.com/2017/06/10/vagrant-tricks-overwrite-variables/
+# https://0x63.me/variables-and-comments-in-vagrantfile/
+# https://stackoverflow.com/questions/19648088/pass-environment-variables-to-vagrant-shell-provisioner
+# https://stackoverflow.com/questions/16708917/how-do-i-include-variables-in-my-vagrantfile
+
+# Multi-Line Comments in Ruby
+# https://stackoverflow.com/questions/2989762/multi-line-comments-in-ruby
+
+# How to Compare Strings in Bash
+# https://linuxize.com/post/how-to-compare-strings-in-bash/
+
+  config.vm.provision "play_ansible",  type: "ansible" do |ansible|
+    ansible.playbook = "playbook.yml"

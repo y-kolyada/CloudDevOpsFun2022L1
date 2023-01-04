@@ -1,0 +1,24 @@
+# pip Installation
+# https://pip.pypa.io/en/stable/installation/
+# python -m ensurepip --upgrade
+
+# Install latest Ansible 7.1
+# https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-and-upgrading-ansible
+# +++ https://www.ansiblepilot.com/articles/ansible-terminology-ansible-vs-ansible-core-packages/
+# python3 -m pip install --user ansible
+# python3 -m pip install --user ansible-core==2.14.1
+
+# Installing Ansible on Fedora or CentOS
+# https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html
+# https://github.com/ansible/ansible/blob/devel/examples/ansible.cfg
+# https://docs.ansible.com/ansible/latest/reference_appendices/config.html#ansible-configuration-settings
+
+# Ansible VS Code Extension by Red Hat
+# https://github.com/ansible/
+
+# Git Push to Remote Branch – How to Push a Local Branch to Origin
+# https://www.freecodecamp.org/news/git-push-to-remote-branch-how-to-push-a-local-branch-to-origin/
+
+# Git Push to Remote Branch – How to Push a Local Branch to Origin
+# https://www.freecodecamp.org/news/git-push-to-remote-branch-how-to-push-a-local-branch-to-origin/
+
