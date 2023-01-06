@@ -15,10 +15,67 @@
 
 # Ansible VS Code Extension by Red Hat
 # https://github.com/ansible/
+# https://github.com/ansible/ansible/blob/devel/examples/ansible.cfg
+# https://docs.ansible.com/ansible/latest/installation_guide/intro_configuration.html
+# https://docs.ansible.com/ansible/latest/reference_appendices/config.html#ansible-configuration-settings
+# https://www.ansible.com/community
+
+
+# ansible-vagrant-examples
+# https://github.com/geerlingguy/ansible-vagrant-examples
+
+# Ansible Vagrant profile for a Jenkins CI server
+# +++ https://github.com/geerlingguy/ansible-vagrant-examples/tree/master/jenkins
+---
+- src: geerlingguy.firewall
+- src: geerlingguy.ntp
+- src: geerlingguy.git
+- src: geerlingguy.java
+- src: geerlingguy.jenkins
+---
+# +++ https://github.com/geerlingguy/ansible-vagrant-examples/tree/master/gitlab
+
+# Vagrant Advanced Examples
+# +++ https://ctrlnotes.com/vagrant-advanced-examples/#
+
+# Use Vagrant to create a CentOS environment for Ansible development
+# https://community.ibm.com/community/user/cloud/blogs/stephan-bester/2022/07/05/use-vagrant-to-create-a-centos-environment-for-ans
+
+# Ansible Vagrant Example – Testing Ansible with Vagrant | Devops Junction
+# https://www.middlewareinventory.com/blog/vagrant-ansible-example/#Ansible_playbook_and_its_artifacts
+
+# Using Ansible with Vagrant
+# https://www.packetswitch.co.uk/using-ansible-with-vagrant/
+
+# Howto Provision Vagrant Virtual Machines with Ansible
+# +++ https://www.youtube.com/watch?v=V6jujUTkJJ8
+
+# Ansible Linux Automation
+# +++ https://www.youtube.com/watch?v=FRQp57iifIc&list=PLtGnc4I6s8dvMkOS0ecQQADV8qJLwlwH9
+
+# Disable cowsay by default
+# https://github.com/ansible/ansible/issues/68571
 
 # Git Push to Remote Branch – How to Push a Local Branch to Origin
 # https://www.freecodecamp.org/news/git-push-to-remote-branch-how-to-push-a-local-branch-to-origin/
 
 # Git Push to Remote Branch – How to Push a Local Branch to Origin
 # https://www.freecodecamp.org/news/git-push-to-remote-branch-how-to-push-a-local-branch-to-origin/
+
+# Automating ssh-copy-id
+# +++ https://www.baeldung.com/linux/ssh-copy-id-automate
+
+# How to include and reference a custom ssh key in a vagrant base (baseline) box? (virtualbox)
+# https://stackoverflow.com/questions/25349427/how-to-include-and-reference-a-custom-ssh-key-in-a-vagrant-base-baseline-box
+
+# Managing SSH keys
+# https://www.ssh.com/academy/ssh/copy-id
+
+# Distributing SSH keys: using ssh-copy-id, manually or automated
+# https://linux-audit.com/distributing-ssh-keys-using-ssh-copy-id-manually-automated/
+
+# How to Use the ssh-copy-id Command
+# https://linuxhint.com/use-ssh-copy-id-command/
+
+
 
