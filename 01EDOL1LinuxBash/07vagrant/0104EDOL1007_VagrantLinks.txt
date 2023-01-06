@@ -34,6 +34,18 @@
 # https://stackoverflow.com/questions/17845637/how-to-change-vagrant-default-machine-name
 # https://developer.hashicorp.com/vagrant/docs/providers/virtualbox/configuration
 
+# What are the names of my network adapters? (Vagrant related)
+# https://superuser.com/questions/857253/what-are-the-names-of-my-network-adapters-vagrant-related
+
+# Need to do Bridged Adapter only in Vagrant, no NAT
+# Configuring Our Vagrant Development Environment's Network
+# https://superuser.com/questions/752954/need-to-do-bridged-adapter-only-in-vagrant-no-nat
+# https://ostechnix.com/how-to-configure-networking-in-vagrant/
+# https://www.thisprogrammingthing.com/2021/Configuring-Our-Vagrant-Development-Environments-Network/
+# https://stackoverflow.com/questions/33250304/how-to-automatically-select-bridged-network-interfaces-in-vagrant
+
+
+
 # Pass environment variables to vagrant shell provisioner
 # https://hx-rd.com/2017/06/10/vagrant-tricks-overwrite-variables/
 # https://0x63.me/variables-and-comments-in-vagrantfile/
