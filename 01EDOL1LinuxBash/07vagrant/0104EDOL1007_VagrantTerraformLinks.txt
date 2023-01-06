@@ -22,6 +22,18 @@
 # https://lebenplusplus.de/2017/07/19/how-to-use-your-vagrant-box-ssh-credentials/
 # https://stackoverflow.com/questions/30075461/how-do-i-add-my-own-public-key-to-vagrant-vm
 
+# multi-machine
+# +++ https://developer.hashicorp.com/vagrant/docs/multi-machine
+# https://developer.hashicorp.com/vagrant/docs/vagrantfile/tips#loop-over-vm-definitions
+# https://developer.hashicorp.com/vagrant/docs/provisioning/ansible
+# +++ https://github.com/MaxBab/vagrant-examples
+# https://linuxconfig.org/redhat-8-start-gui
+
+
+# How to change Vagrant 'default' machine name?
+# https://stackoverflow.com/questions/17845637/how-to-change-vagrant-default-machine-name
+# https://developer.hashicorp.com/vagrant/docs/providers/virtualbox/configuration
+
 # Pass environment variables to vagrant shell provisioner
 # https://hx-rd.com/2017/06/10/vagrant-tricks-overwrite-variables/
 # https://0x63.me/variables-and-comments-in-vagrantfile/
