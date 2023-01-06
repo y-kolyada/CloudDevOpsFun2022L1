@@ -21,6 +21,18 @@
 # https://shanemcd.org/2018/12/15/installing-virtualbox-guest-additions-in-a-debian-vagrant-box-on-windows-10/
 
 
+# Shell Provisioner
+# https://developer.hashicorp.com/vagrant/docs/provisioning/shell
+# Vagrant claims script finishes with non-zero exit status when it doesn't 
+# https://github.com/hashicorp/vagrant/issues/11715
+# Vagrant runs inline scripts multiple times, and ones which haven't been defined
+# https://askubuntu.com/questions/1333273/vagrant-runs-inline-scripts-multiple-times-and-ones-which-havent-been-defined
+# Vagrant tricks – overwrite variables
+# https://hx-rd.com/2017/06/10/vagrant-tricks-overwrite-variables/
+# How to check if a bash script is executed inside or outside a vagrant machine?
+# https://stackoverflow.com/questions/44241938/how-to-check-if-a-bash-script-is-executed-inside-or-outside-a-vagrant-machine
+
+
 # Overriding the Default Forwarded SSH Port in Vagrant
 # https://realguess.net/2015/10/06/overriding-the-default-forwarded-ssh-port-in-vagrant/
 # https://stackoverflow.com/questions/55332816/how-to-set-vagrants-host-ssh-port
