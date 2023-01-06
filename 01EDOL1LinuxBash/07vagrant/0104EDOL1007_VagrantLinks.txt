@@ -1,7 +1,25 @@
+# Vagrant Cloud
+# https://app.vagrantup.com/centos/boxes/stream8
+# https://app.vagrantup.com/hashicorp/
+
 # Vagrant vs Terraform
 # https://developer.hashicorp.com/vagrant/intro/vs/terraform
 # https://www.techtarget.com/searchnetworking/tip/Ansible-vs-Terraform-vs-Vagrant-Whats-the-difference
 # https://www.trustradius.com/compare-products/hashicorp-terraform-vs-hashicorp-vagrant
+
+
+# Providers \ VirtualBox \ Configuration
+# +++ https://developer.hashicorp.com/vagrant/docs/providers/virtualbox/configuration
+# How to set vagrant virtualbox video memory
+# https://stackoverflow.com/questions/24231620/how-to-set-vagrant-virtualbox-video-memory
+# Fixing a guest screen resolution in VirtualBox
+# https://superuser.com/questions/301464/fixing-a-guest-screen-resolution-in-virtualbox
+# https://stackoverflow.com/questions/20227140/can-i-bring-up-the-gui-for-a-vagrant-managed-virtual-box-while-the-box-is-runnin
+# Enabling VirtualBox Guest Additions in Vagrant
+# https://subscription.packtpub.com/book/cloud-&-networking/9781786464910/1/ch01lvl1sec12/enabling-virtualbox-guest-additions-in-vagrant
+# https://www.serverlab.ca/tutorials/virtualization/how-to-auto-upgrade-virtualbox-guest-additions-with-vagrant/
+# https://shanemcd.org/2018/12/15/installing-virtualbox-guest-additions-in-a-debian-vagrant-box-on-windows-10/
+
 
 # Overriding the Default Forwarded SSH Port in Vagrant
 # https://realguess.net/2015/10/06/overriding-the-default-forwarded-ssh-port-in-vagrant/
@@ -33,10 +51,16 @@
 # How to change Vagrant 'default' machine name?
 # https://stackoverflow.com/questions/17845637/how-to-change-vagrant-default-machine-name
 # https://developer.hashicorp.com/vagrant/docs/providers/virtualbox/configuration
+# https://gist.github.com/dasgoll/42e8bf75c1b77fcc69b8
 
+# How to find the Vagrant IP?
+# https://stackoverflow.com/questions/14870900/how-to-find-the-vagrant-ip
+
+# Public Networks
+# +++ https://developer.hashicorp.com/vagrant/docs/networking/public_network
+# https://developer.hashicorp.com/vagrant/docs/networking/private_network
 # What are the names of my network adapters? (Vagrant related)
 # https://superuser.com/questions/857253/what-are-the-names-of-my-network-adapters-vagrant-related
-
 # Need to do Bridged Adapter only in Vagrant, no NAT
 # Configuring Our Vagrant Development Environment's Network
 # https://superuser.com/questions/752954/need-to-do-bridged-adapter-only-in-vagrant-no-nat
