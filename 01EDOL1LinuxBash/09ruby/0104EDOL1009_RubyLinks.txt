@@ -1,0 +1,22 @@
+# Guide to Ruby If & Else Statements
+# https://www.rubyguides.com/ruby-tutorial/ruby-if-else/
+# https://stackoverflow.com/questions/377768/string-concatenation-in-ruby
+
+# How to Use Ruby Conversion Methods (to_s, to_a, to_str)
+# https://www.rubyguides.com/2018/09/ruby-conversion-methods/
+
+# How do I get the name of the current directory in Ruby?
+# https://stackoverflow.com/questions/11074024/how-do-i-get-the-name-of-the-current-directory-in-ruby
+
+# How can I get the intersection, union, and subset of arrays in Ruby?
+# https://stackoverflow.com/questions/5678108/how-can-i-get-the-intersection-union-and-subset-of-arrays-in-ruby
+
+# How do I sort an array of hashes by a value in the hash?
+# +++ https://stackoverflow.com/questions/3154111/how-do-i-sort-an-array-of-hashes-by-a-value-in-the-hash
+
+# How to Sort Arrays & Hashes in Ruby
+# +++ https://www.rubyguides.com/2017/07/ruby-sort/
+# https://www.geeksforgeeks.org/how-to-make-a-custom-array-of-hashes-in-ruby/
+
+# How To Use Environment Variables in Ruby
+# https://www.rubyguides.com/2019/01/ruby-environment-variables/
