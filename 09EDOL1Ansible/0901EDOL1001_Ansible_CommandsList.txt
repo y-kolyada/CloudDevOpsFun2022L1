@@ -34,6 +34,37 @@ ansible localhost -m ping
 # kyiv
 ansible -i myhosts ukraine --list-hosts
 
+# vim ~/.vimrc
+# set bg=dark
+# syntax on
+# autocmd FileType yaml setlocal ai ts=2 sw=2 et
+# vim inventory.yml
+# ---
+# all:
+#   children:
+#     ukraine:
+#       children:
+#         kharkiv:
+#           hosts:
+#             www1.example.com:
+#             db1.example.com:
+#         kyiv:
+#           hosts:
+#             www2.example.com:
+#             db2.example.com:
+#           vars:
+#             ntp_server: ntp.example.com
+#     database:
+#       hosts:
+#         db1.example.com:
+#         db2.example.com:
+#     www:
+#       hosts:
+#         www1.example.com:
+#         www2.example.com:
+ansible -i inventory.yml kharkiv --list-hosts
+
+
 # facts
 ansible dev001 -m ansible.builtin.gather_facts
 ansible dev001 -m setup
