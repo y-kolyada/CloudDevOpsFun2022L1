@@ -64,6 +64,10 @@ ansible -i myhosts ukraine --list-hosts
 #         www2.example.com:
 ansible -i inventory.yml kharkiv --list-hosts
 
+# ad-hoc commands
+ansible all -i inventory -m user -a "name=jon state=present"
+ansible all -i inventory -m user -a "name=jon state=absent"
+ansible-doc user 
 
 # facts
 ansible dev001 -m ansible.builtin.gather_facts
@@ -81,6 +85,8 @@ ansible-playbook --vault-password-file ./p ansible/copy_keys.yml
 
 # ansible-doc <module>
 ansible-doc ping
+ansible-doc -l
+ansible-doc -l | grep timezone
 
 # Insible plagin for Vagrant
 vagrant provision --provision-with ansible
