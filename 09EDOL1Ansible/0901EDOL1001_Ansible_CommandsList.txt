@@ -17,3 +17,4 @@ ansible-playbook ansible/create_users.yml
 ansible-vault encrypt ansible/group_vars/all
 ansible-playbook --vault-id @prompt ansible/delete_users.yml
 ansible-playbook --vault-password-file ./p ansible/copy_keys.yml
+

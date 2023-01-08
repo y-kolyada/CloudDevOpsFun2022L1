@@ -2,6 +2,7 @@
 - name: Create New Users
   vars_files:
     - group_vars/all
+    - group_vars/development
   hosts: "{{ host_or_group }}"
   gather_facts: false
   become: true
@@ -12,4 +13,5 @@
         state: present
         password: "{{ default_user_password | password_hash('sha512', 'A512') }}"
         shell: /bin/bash
+        group: "{{ admin_group }}"
       loop: "{{ users }}"
