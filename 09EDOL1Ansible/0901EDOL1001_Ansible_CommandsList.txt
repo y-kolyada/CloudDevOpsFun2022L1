@@ -1,5 +1,6 @@
 ssh-keygen -t rsa -f ./public_keys/devops_id_rsa -C devops
 
+# install
 python -m pip show ansible
 python3 -m pip install --user ansible
 whereis ansible
@@ -7,14 +8,41 @@ ansible --version
 ansible-core --version
 ansible-galaxy --version
 
-vagrant provision --provision-with ansible
+# inventory
+grep inventory /etc/ansible/ansible.cfg
+ansible all --list-hosts
+ansible development --list-hosts
+ansible all -m ping
+ansible localhost -m ping
+# vim myhosts
+# [www]
+# host[1:2]
+#
+# [db]
+# 192.168.1.1[1:2]
+#
+# [kharkiv]
+# host1
+# 192.168.1.11
+#
+# [kyiv]
+# host2
+# 192.168.1.12
+#
+# [ukraine:children]
+# kharkiv
+# kyiv
+ansible -i myhosts ukraine --list-hosts
 
+# facts
 ansible dev001 -m ansible.builtin.gather_facts
 ansible dev001 -m setup
 ansible dev001 -m setup | wc -l
 
+# playbooks
 ansible-playbook ansible/create_users.yml
 
+# vault
 ansible-vault encrypt ansible/group_vars/all
 ansible-vault encrypt ansible/group_vars/development
 ansible-playbook --vault-id @prompt ansible/delete_users.yml
@@ -22,3 +50,6 @@ ansible-playbook --vault-password-file ./p ansible/copy_keys.yml
 
 # ansible-doc <module>
 ansible-doc ping
+
+# Insible plagin for Vagrant
+vagrant provision --provision-with ansible
