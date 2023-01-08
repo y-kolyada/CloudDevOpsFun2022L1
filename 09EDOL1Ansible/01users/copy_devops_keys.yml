@@ -1,0 +1,16 @@
+---
+- name: Add deploy Keys to hosts
+  vars_files:
+    - group_vars/all
+  hosts: "{{ host_or_group }}"
+  gather_facts: false
+  become: true
+  tasks:
+  - name: Install devops Key Task
+    ansible.posix.authorized_key:
+      user: devops
+      state: present
+      key: "{{ item }}"
+    with_file:
+      - ~/vg/projects/public_keys/devops_id_rsa.pub
+      - ~/.ssh/id_rsa.pub

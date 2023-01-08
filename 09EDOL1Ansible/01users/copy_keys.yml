@@ -1,0 +1,15 @@
+---
+# Run as root if it's not for current user only 
+- name: Add Keys to hosts
+  vars_files:
+    - group_vars/all
+  hosts: "{{ host_or_group }}"
+  gather_facts: false
+  become: true
+  tasks:
+  - name: Install Key Task
+    ansible.posix.authorized_key:
+      user: "{{ item }}"
+      state: present
+      key: "{{ lookup('file', '/home/{{ item }}/.ssh/id_rsa.pub') }}"
+    loop: "{{ users }}"
