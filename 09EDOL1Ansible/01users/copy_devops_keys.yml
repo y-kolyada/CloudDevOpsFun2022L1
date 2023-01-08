@@ -1,7 +1,8 @@
 ---
+# code: language=ansible
 - name: Add deploy Keys to hosts
   vars_files:
-    - group_vars/all
+    - inventory/group_vars/all
   hosts: "{{ host_or_group }}"
   gather_facts: false
   become: true

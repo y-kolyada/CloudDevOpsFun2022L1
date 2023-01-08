@@ -1,8 +1,9 @@
 ---
+# code: language=ansible
 - name: Create New Users
   vars_files:
-    - group_vars/all
-    - group_vars/development
+    - inventory/group_vars/all
+    - inventory/group_vars/development
   hosts: "{{ host_or_group }}"
   gather_facts: false
   become: true

@@ -1,13 +1,14 @@
 ---
+# code: language=ansible
 # Run as root if it's not for current user only 
-- name: Add Keys to hosts
+- name: Add SSH Keys to hosts
   vars_files:
-    - group_vars/all
+    - inventory/group_vars/all
   hosts: "{{ host_or_group }}"
   gather_facts: false
   become: true
   tasks:
-  - name: Install Key Task
+  - name: Install SSH Keys Task
     ansible.posix.authorized_key:
       user: "{{ item }}"
       state: present

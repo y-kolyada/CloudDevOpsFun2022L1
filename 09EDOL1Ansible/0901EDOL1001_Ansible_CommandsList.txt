@@ -14,7 +14,11 @@ ansible dev001 -m setup
 ansible dev001 -m setup | wc -l
 
 ansible-playbook ansible/create_users.yml
+
 ansible-vault encrypt ansible/group_vars/all
+ansible-vault encrypt ansible/group_vars/development
 ansible-playbook --vault-id @prompt ansible/delete_users.yml
 ansible-playbook --vault-password-file ./p ansible/copy_keys.yml
 
+# ansible-doc <module_name>
+ansible-doc ping
