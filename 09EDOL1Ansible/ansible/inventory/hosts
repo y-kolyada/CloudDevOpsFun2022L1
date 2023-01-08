@@ -1,0 +1,23 @@
+dev ansible_host=10.0.10.51 ansible_user=vagrant
+qa ansible_host=10.0.10.52 ansible_user=vagrant
+integ ansible_host=10.0.10.53 ansible_user=vagrant
+prod ansible_host=10.0.10.54 ansible_user=vagrant
+dev001 ansible_host=10.0.10.61 ansible_user=vagrant
+
+[all]
+dev
+qa
+integ
+prod
+dev001
+
+[integration]
+dev
+qa
+integ
+
+[deploy]
+prod
+
+[development]
+dev001

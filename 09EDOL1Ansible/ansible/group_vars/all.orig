@@ -1,0 +1,4 @@
+host_or_group: dev001
+admin_group: wheel
+default_user_password: vagrant
+users: ['ik']
