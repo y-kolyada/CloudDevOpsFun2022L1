@@ -69,6 +69,53 @@ ansible all -i inventory -m user -a "name=jon state=present"
 ansible all -i inventory -m user -a "name=jon state=absent"
 ansible-doc user 
 
+# variables in inventory
+
+# vim myhosts
+# [www]
+# 192.168.1.1[1:2]
+#
+# [rhel]
+# 192.168.1.11
+#
+# [ubuntu]
+# 192.168.1.12
+#
+# [rhel:vars]
+# apache_package = httpd
+#
+# [ubuntu:vars]
+# apache_package = apache2
+ansible rhel -m yum -a 'name="{{ apache_package }}" state=installed'
+ansible ubuntu -m apt -a 'name="{{ apache_package }}" state=installed'
+
+# vim inventory.yml
+# ---
+# all:
+#   children:
+#     development:
+#       hosts:
+#         192.168.2.4: {}
+#         192.168.2.5: {}
+#     rhel:
+#       vars:
+#         apache_package: httpd
+#       children:
+#           hosts:
+#             192.168.2.4: {}
+#             192.168.2.4: {}
+#           vars:
+#             ntp_server: ntp.example.com
+#     ubuntu:
+#       vars:
+#         apache_package: apache2
+#       children:
+#           hosts:
+#             192.168.2.5: {}
+ansible rhel -i inventory.yml -m yum -a 'name="{{ apache_package }}" state=absent'
+ansible ubuntu -i inventory.yml -m apt -a 'name="{{ apache_package }}" state=absent'
+
+
 # facts
 ansible dev001 -m ansible.builtin.gather_facts
 ansible dev001 -m setup
