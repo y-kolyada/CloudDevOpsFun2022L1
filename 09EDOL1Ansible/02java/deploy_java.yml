@@ -1,0 +1,13 @@
+---
+- name: Deploy Java Playbook
+  vars_files:    
+    - inventory/group_vars/development
+  hosts: "{{ host_or_group }}"
+  gather_facts: true
+  become: true
+  tasks:
+    - name: Install java-1.8.0-openjdk-devel Package Task
+      ansible.builtin.yum:
+        name: 
+          - java-1.8.0-openjdk-devel        
+        state: latest
