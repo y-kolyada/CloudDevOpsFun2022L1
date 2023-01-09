@@ -1,7 +1,5 @@
 ---
-# code: language=ansible
-# Run as root if it's not for current user only 
-- name: Add SSH Keys to hosts
+- name: Add SSH Keys to hosts Playbook
   vars_files:
     - inventory/group_vars/all
   hosts: "{{ host_or_group }}"

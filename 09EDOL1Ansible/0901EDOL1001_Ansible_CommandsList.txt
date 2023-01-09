@@ -115,14 +115,15 @@ ansible ubuntu -m apt -a 'name="{{ apache_package }}" state=installed'
 ansible rhel -i inventory.yml -m yum -a 'name="{{ apache_package }}" state=absent'
 ansible ubuntu -i inventory.yml -m apt -a 'name="{{ apache_package }}" state=absent'
 
-
 # facts
 ansible dev001 -m ansible.builtin.gather_facts
 ansible dev001 -m setup
 ansible dev001 -m setup | wc -l
 
-# playbooks
-ansible-playbook ansible/create_users.yml
+# playbook "create_devops_user"
+ansible-playbook ansible/create_devops_user.yml --syntax-check
+ansible-playbook ansible/create_devops_user.yml -v
+ansible-playbook ansible/create_devops_user.yml
 
 # vault
 ansible-vault encrypt ansible/group_vars/all

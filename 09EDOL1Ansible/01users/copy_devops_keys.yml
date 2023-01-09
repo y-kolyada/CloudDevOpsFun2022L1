@@ -1,8 +1,7 @@
 ---
-# code: language=ansible
-- name: Add deploy Keys to hosts
+- name: Add deploy Keys to hosts Playbook
   vars_files:
-    - inventory/group_vars/all
+    - inventory/group_vars/development
   hosts: "{{ host_or_group }}"
   gather_facts: false
   become: true

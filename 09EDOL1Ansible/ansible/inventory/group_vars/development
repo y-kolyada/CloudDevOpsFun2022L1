@@ -1,2 +1,4 @@
+host_or_group: development
 admin_group: wheel
-default_user_password: vagrant
+devops_users: ['devops']
+default_devops_password: vagrant

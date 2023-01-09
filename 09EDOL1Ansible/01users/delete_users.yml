@@ -1,6 +1,5 @@
 ---
-# code: language=ansible
-- name: Clean User Accounts
+- name: Delete User Accounts Playbook
   vars_files:
     - inventory/group_vars/all
   hosts: "{{ host_or_group }}"
