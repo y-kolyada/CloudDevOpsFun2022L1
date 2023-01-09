@@ -1,0 +1,35 @@
+---
+- name: Activate Firewall Playbook
+  vars_files:    
+    - inventory/group_vars/development
+  hosts: "{{ host_or_group }}"
+  gather_facts: true
+  become: true
+  tasks:
+    - name: Install Firewall Package Task
+      ansible.builtin.yum:
+        name: 
+          - firewalld        
+        state: latest
+
+    - name: Start Firewall Task
+      ansible.builtin.service:
+        name: "{{ item }}"
+        state: started
+        enabled: true
+      loop:
+        - firewalld
+
+    - name: Permit SSH traffic in default zone Task
+      ansible.posix.firewalld:
+        service: ssh
+        permanent: true
+        immediate: true
+        state: enabled
+
+    - name: Permit Tomcat traffic in default zone Task
+      ansible.posix.firewalld:
+        port: 8080/tcp
+        permanent: true
+        immediate: true
+        state: enabled
