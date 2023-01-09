@@ -20,6 +20,12 @@
 # https://docs.ansible.com/ansible/latest/reference_appendices/config.html#ansible-configuration-settings
 # https://www.ansible.com/community
 
+# YAML Syntax
+# https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html
+# https://stackoverflow.com/questions/62170412/how-to-render-a-yaml-list-in-a-vagrantfile
+
+# How to render a YAML list in a Vagrantfile
+# https://stackoverflow.com/questions/62170412/how-to-render-a-yaml-list-in-a-vagrantfile
 
 # ansible-vagrant-examples
 # https://github.com/geerlingguy/ansible-vagrant-examples
@@ -73,9 +79,41 @@
 
 # Distributing SSH keys: using ssh-copy-id, manually or automated
 # https://linux-audit.com/distributing-ssh-keys-using-ssh-copy-id-manually-automated/
+# https://docs.ansible.com/ansible/latest/collections/ansible/posix/authorized_key_module.html
+# https://serverfault.com/questions/323958/how-do-you-create-an-ssh-key-for-another-user
 
 # How to Use the ssh-copy-id Command
 # https://linuxhint.com/use-ssh-copy-id-command/
 
+# Ansible 2.5 Module "service_facts"
+# +++ https://stackoverflow.com/questions/49831105/ansible-2-5-module-service-facts-how-can-filter-an-output-how-can-get-as-res
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_facts_module.html
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_facts_module.html
 
+# ansible.builtin.debug module – Print statements during execution
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/debug_module.
 
+# How can I run a ansible task only if a file or directory does NOT exist
+# https://stackoverflow.com/questions/35021384/how-can-i-run-a-ansible-task-only-if-a-file-or-directory-does-not-
+# https://stackoverflow.com/questions/30119973/how-to-run-a-task-when-variable-is-undefined-in-ansible
+
+# ansible.builtin.shell module – Execute shell commands on targets
+# +++ https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html
+
+# Ansible Playbook to install Tomcat – how-to guide
+# +++ https://www.middlewareinventory.com/blog/ansible-tomcat-installation/
+# https://www.middlewareinventory.com/blog/category/ansible/
+# +++ https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/
+
+# ansible.posix.firewalld module – Manage arbitrary ports/services with firewalld
+# https://docs.ansible.com/ansible/latest/collections/ansible/posix/firewalld_module.html
+
+# ansible.builtin.copy module – Copy files to remote locations
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html
+# https://www.toptechskills.com/ansible-tutorials-courses/ansible-copy-module-tutorial-examples/
+
+# How to install Java OpenJDK on CentOS 8
+# +++ https://cscontents.com/automation-of-java-installation-using-ansible/
+# +++ https://sysreseau.net/how-to-install-java-openjdk-on-centos-8/
+# https://medium.com/@dmarko484/ansible-java-and-tomcat-on-ubuntu-server-installation-70e08f6f4efa
+# https://github.com/abessifi/ansible-java

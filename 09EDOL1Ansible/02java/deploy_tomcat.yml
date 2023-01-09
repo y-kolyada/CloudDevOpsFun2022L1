@@ -1,0 +1,107 @@
+---
+- name: Deploy Tomcat9  from tomcat.apache.org Playbook
+  vars_files:
+    - inventory/group_vars/development
+  vars:
+    tomcat: apache-tomcat-9.0.70
+    services_running: []
+    download_url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/{{ tomcat }}.tar.gz
+  hosts: "{{ host_or_group }}"
+  gather_facts: true
+  become: true
+  tasks:
+    - name: Validate if Java is availble Task
+      ansible.builtin.shell: "java -version"
+
+    - name: Create the Tomcat group Task
+      ansible.builtin.group:
+        name: tomcat
+        state: present
+
+    - name: Create the Tomcat user Task
+      ansible.builtin.user:
+        name: tomcat
+        state: present
+
+    - name: Create a Directory /opt/{{ tomcat }} Task
+      ansible.builtin.file:
+        path: /opt/{{ tomcat }}
+        state: directory
+        mode: 0755
+        owner: tomcat
+        group: tomcat
+
+    - name: Populate Tomcat service facts Task
+      ansible.builtin.service_facts:     
+
+    - name: Print Tomcat service facts Task
+      ansible.builtin.debug:
+        var: ansible_facts.services['tomcat.service'].state
+
+    - name: Download Tomcat using unarchive Task
+      ansible.builtin.unarchive:
+        src: "{{ download_url }}"
+        dest: /opt/{{ tomcat }}
+        mode: 0755
+        remote_src: true
+        group: tomcat
+        owner: tomcat
+      when: ansible_facts.services['tomcat.service'].state != 'running'
+
+    - name: Move files to the /opt/{{ tomcat }} directory Task
+      become_user: tomcat
+      ansible.builtin.shell: |
+        mv /opt/{{ tomcat }}/apache*/* /opt/{{ tomcat }}/
+        rm -fr /opt/{{ tomcat }}/apache*
+      when: ansible_facts.services['tomcat.service'].state != 'running'
+
+    - name: Creating a Tomcat service file Task
+      ansible.builtin.copy:
+        content: |-
+          [Unit]
+          Description=Tomcat Service
+          Requires=network.target
+          After=network.target
+
+          [Service]
+          Type=forking
+          User=tomcat          
+          Environment="CATALINA_PID=/opt/{{ tomcat }}/logs/tomcat.pid"
+          Environment="CATALINA_BASE=/opt/{{ tomcat }}"
+          Environment="CATALINA_HOME=/opt/{{ tomcat }}"
+          Environment="CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC"
+
+          ExecStart=/opt/{{ tomcat }}/bin/startup.sh
+          ExecStop=/opt/{{ tomcat }}/bin/shutdown.sh
+          Restart=on-abnormal
+
+          [Install]
+          WantedBy=multi-user.target
+        dest: /etc/systemd/system/tomcat.service
+      when: ansible_facts.services['tomcat.service'].state != 'running'
+      register: copy_output
+
+    - name: Print Tomcat copy facts Task
+      ansible.builtin.debug:
+        var: copy_output
+
+    - name: Reload the SystemD to re-read configurations Task
+      ansible.builtin.systemd:
+        daemon-reload: yes
+      when: ansible_facts.services['tomcat.service'].state != 'running'
+
+    - name: Enable the Tomcat service and start Task
+      ansible.builtin.systemd:
+        name: tomcat
+        enabled: yes
+        state: started
+
+    - name: Connect to Tomcat server on port 8080 and check status 200 - Try 5 times Task
+      become: false
+      tags: test
+      ansible.builtin.uri:
+        url: http://localhost:8080
+      register: result
+      until: "result.status == 200"
+      retries: 5
+      delay: 10

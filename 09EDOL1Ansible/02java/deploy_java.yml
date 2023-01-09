@@ -6,8 +6,20 @@
   gather_facts: true
   become: true
   tasks:
+    - name: Fetch java version Task
+      shell: java -version
+      changed_when: False
+      register: java_result
+      failed_when: False
+  
     - name: Install java-1.8.0-openjdk-devel Package Task
       ansible.builtin.yum:
-        name: 
-          - java-1.8.0-openjdk-devel        
+        name:
+          - java-1.8.0-openjdk-devel
+        update_cache: yes
         state: latest
+      when: java_result.rc!=0
+
+    - name: Print Tomcat service facts Task
+      ansible.builtin.debug:
+        var: java_result
