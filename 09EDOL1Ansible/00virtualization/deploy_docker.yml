@@ -28,7 +28,7 @@
         state: latest
       when: docker_result.rc!=0
 
-    - name: Start Firewall Task
+    - name: Start Docker Service Task
       ansible.builtin.service:
         name: docker
         state: started

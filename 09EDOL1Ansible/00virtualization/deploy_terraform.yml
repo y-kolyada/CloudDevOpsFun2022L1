@@ -1,0 +1,34 @@
+---
+- name: Deploy Terraform Playbook
+  vars_files:    
+    - inventory/group_vars/development
+  hosts: "{{ host_or_group }}"
+  gather_facts: true
+  become: true
+  tasks:
+    - name: Fetch Terraform version Task
+      shell: terraform --version
+      changed_when: False
+      register: terraform_result
+      failed_when: False
+
+    - name: Install Terraform repo Task
+      ansible.builtin.shell: |
+        dnf config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+      when: terraform_result.rc!=0
+
+    - name: Install Terraform package from repo Task
+      ansible.builtin.yum:
+        name:
+          - terraform
+        update_cache: yes
+        state: latest
+      when: terraform_result.rc!=0
+
+    - name: Validate if Terraform is availble Task
+      ansible.builtin.shell: "terraform --version"
+      register: register_terraform
+
+    - name: Print Terraform facts Task
+      ansible.builtin.debug:
+        var: register_terraform['stdout']
