@@ -1,0 +1,63 @@
+---
+- name: Deploy Maven from maven.apache.org Playbook
+  vars_files:
+    - inventory/group_vars/development
+  vars:
+    maven: apache-maven-3.8.7
+    user: devops
+    download_url: https://dlcdn.apache.org/maven/maven-3/3.8.7/binaries/{{ maven }}-bin.tar.gz
+  hosts: "{{ host_or_group }}"
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Validate if Java is availble Task
+      ansible.builtin.shell: "java -version"
+      register: register_java
+
+    - name: Print Java facts Task
+      ansible.builtin.debug:
+        var: register_java['stderr']
+
+    - name: Validate if Maven is availble Task
+      ansible.builtin.stat:
+        path: /opt/{{ maven }}
+      register: register_maven
+
+    - name: Print Maven Directory facts Task
+      ansible.builtin.debug:
+        var: register_maven['stat']['path']
+
+    - name: Create a Directory /opt/{{ maven }} Task
+      ansible.builtin.file:
+        path: /opt/{{ maven }}
+        state: directory
+        mode: 0755
+      when: not register_maven.stat.exists
+
+    - name: Download Maven using unarchive Task
+      ansible.builtin.unarchive:
+        src: "{{ download_url }}"
+        dest: /opt/{{ maven }}
+        mode: 0755
+        remote_src: true
+      when: not register_maven.stat.exists
+
+    - name: Move files to the /opt/{{ maven }} directory Task
+      ansible.builtin.shell: |
+        mv /opt/{{ maven }}/apache*/* /opt/{{ maven }}/
+        rm -fr /opt/{{ maven }}/apache*
+      when: not register_maven.stat.exists
+
+    - name: Add Maven bin dir to system-wide $PATH.
+      ansible.builtin.copy:
+        dest: /etc/profile.d/maven.sh
+        content: 'PATH=$PATH:/opt/{{ maven }}/bin'
+      when: not register_maven.stat.exists
+
+    - name: Validate if Maven is availble Task
+      ansible.builtin.shell: "/opt/{{ maven }}/bin/mvn -version"
+      register: register_maven
+
+    - name: Print Java facts Task
+      ansible.builtin.debug:
+        var: register_maven['stdout']

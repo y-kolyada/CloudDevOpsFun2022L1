@@ -1,10 +1,9 @@
 ---
-- name: Deploy Tomcat9  from tomcat.apache.org Playbook
+- name: Deploy Tomcat9 from tomcat.apache.org Playbook
   vars_files:
     - inventory/group_vars/development
   vars:
     tomcat: apache-tomcat-9.0.70
-    services_running: []
     download_url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/{{ tomcat }}.tar.gz
   hosts: "{{ host_or_group }}"
   gather_facts: true
@@ -79,11 +78,11 @@
           WantedBy=multi-user.target
         dest: /etc/systemd/system/tomcat.service
       when: ansible_facts.services['tomcat.service'].state != 'running'
-      register: copy_output
+      register: register_service
 
-    - name: Print Tomcat copy facts Task
+    - name: Print Tomcat service facts Task
       ansible.builtin.debug:
-        var: copy_output
+        var: register_service
 
     - name: Reload the SystemD to re-read configurations Task
       ansible.builtin.systemd:

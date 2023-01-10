@@ -117,3 +117,22 @@
 # +++ https://sysreseau.net/how-to-install-java-openjdk-on-centos-8/
 # https://medium.com/@dmarko484/ansible-java-and-tomcat-on-ubuntu-server-installation-70e08f6f4efa
 # https://github.com/abessifi/ansible-java
+
+# Maven
+# https://dlcdn.apache.org/maven/maven-3/3.8.7/binaries/
+
+# Add a path to the global $PATH with Ansible
+# https://www.jeffgeerling.com/blog/2017/add-path-global-path-ansible
+
+# Ansible - How to add/modify PATH variable in CentOS
+# https://stackoverflow.com/questions/56560173/ansible-how-to-add-modify-path-variable-in-centos
+# https://unix.stackexchange.com/questions/612460/permanently-add-item-to-path-using-ansible-on-rhel7
+
+# Checking if a File Exists in Ansible
+# https://phoenixnap.com/kb/ansible-check-if-file-exists
+
+# Ansible stdout Formatting
+# https://stackoverflow.com/questions/50009505/ansible-stdout-formatting
+
+
+
