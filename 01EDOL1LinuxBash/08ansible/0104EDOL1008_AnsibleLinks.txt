@@ -134,5 +134,8 @@
 # Ansible stdout Formatting
 # https://stackoverflow.com/questions/50009505/ansible-stdout-formatting
 
+# Adding or removing software repositories in Fedora
+# https://docs.fedoraproject.org/en-US/quick-docs/adding-or-removing-software-repositories-in-fedora/
 
-
+# Adding a user to an additional group using ansible
+# https://serverfault.com/questions/542910/adding-a-user-to-an-additional-group-using-ansible

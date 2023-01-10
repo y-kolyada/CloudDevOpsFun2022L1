@@ -1,0 +1,50 @@
+---
+- name: Deploy Docker Playbook
+  vars_files:    
+    - inventory/group_vars/development
+  hosts: "{{ host_or_group }}"
+  gather_facts: true
+  become: true
+  tasks:
+    - name: Fetch Docker version Task
+      shell: docker --version
+      changed_when: False
+      register: docker_result
+      failed_when: False
+
+    - name: Install Docker repo Task
+      ansible.builtin.shell: |
+        dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+      when: docker_result.rc!=0
+
+    - name: Install Docker package from repo Task
+      ansible.builtin.yum:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+          - docker-compose-plugin
+        update_cache: yes
+        state: latest
+      when: docker_result.rc!=0
+
+    - name: Start Firewall Task
+      ansible.builtin.service:
+        name: docker
+        state: started
+        enabled: true
+
+    - name: Add users {{ users }} to group docker Task
+      ansible.builtin.user:
+          name: "{{ item }}"
+          groups: docker
+          append: true
+      loop: "{{ users }}"
+
+    - name: Validate if Docker is availble Task
+      ansible.builtin.shell: "docker --version"
+      register: register_docker
+
+    - name: Print Docker facts Task
+      ansible.builtin.debug:
+        var: register_docker['stdout']
